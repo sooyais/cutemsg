@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Message Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #FFE4E1; }
+        h1 { color: #FF69B4; }
+        button { padding: 10px 20px; border: none; border-radius: 5px; background-color: #FFB6C1; color: white; cursor: pointer; font-size: 16px; margin-top: 20px; }
+        button:hover { background-color: #FF69B4; }
+        #message { margin-top: 20px; font-size: 24px; color: #FF1493; }
+        #noButton { position: absolute; }
+    </style>
+</head>
+<body>
+    <h1>Please forgive me bb 🥺❤️</h1>
+    <p id="message">Jangan merajuk bb 🥺❤️</p>
+    <div>
+        <button onclick="showLoveMessage()">Yes</button>
+        <button id="noButton" onmouseover="moveButton()">No</button>
+    </div>
+
+    <script>
+        function moveButton() {
+            const button = document.getElementById('noButton');
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
+        }
+
+        function showLoveMessage() {
+            document.getElementById('message').textContent = 'I love you so much bb ❤️';
+        }
+    </script>
+</body>
+</html>
