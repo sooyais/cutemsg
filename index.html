@@ -22,6 +22,19 @@
     </div>
 
     <script>
+        const messages = [
+            'You are my sunshine, my only sunshine! 🌞',
+            'I love you to the moon and back! ❤️',
+            'Every moment with you is like a dream come true! 🥰',
+            'You're the peanut butter to my jelly! 💕',
+            'With you, every day feels like a rainbow! 🌈',
+            'You make my heart bloom like a sunflower! 🌻',
+            'You're the sweetest part of my day! 🍫',
+            'You are the lyrics to my favorite love song! 🎶',
+            'You light up my world like nobody else! 🌟',
+            'You make my heart do the happy dance! 💖'
+        ];
+
         function moveButton() {
             const button = document.getElementById('noButton');
             const x = Math.random() * (window.innerWidth - button.offsetWidth);
@@ -31,7 +44,8 @@
         }
 
         function showLoveMessage() {
-            document.getElementById('message').textContent = 'I love you so much bb ❤️';
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('message').textContent = randomMessage;
         }
     </script>
 </body>
